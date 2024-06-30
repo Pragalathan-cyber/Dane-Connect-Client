@@ -15,7 +15,7 @@ const EditPost = ({ token }) => {
 
   const fetchPostDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:7000/posts/${id}`, {
+      const response = await axios.get(`https://dane-test-backend.vercel.app/posts/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -32,7 +32,7 @@ const EditPost = ({ token }) => {
   const handleSavePost = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:7000/posts/${id}`, {
+      const response = await axios.put(`https://dane-test-backend.vercel.app/posts/${id}`, {
         content: postDesc,
         imageUrl: postImg
       }, {
